@@ -2,7 +2,7 @@
 """
 Created on Wed Feb  6 15:26:54 2019
 
-PURPOSE: Import source file from \\md1fs019\Ts\File_Transfer\BDM_SRC_DATA\<study> directory along with a number of libraries potentially useful for evaluating souce data.
+PURPOSE: Import source file from <directory>\<study> directory along with a number of libraries potentially useful for evaluating souce data.
 
 INPUT: 
     bdm_study_code: str
@@ -17,6 +17,6 @@ OUTPUT: pandas DataFrame
 
 def import_src_file(bdm_study_code, file_name):
     
-    df = pd.read_csv(r"\\md1fs019\Ts\File_Transfer\BDM_SRC_DATA" + "\\" + bdm_study_code + "\\" + file_name, low_memory=False) 
+    df = pd.read_csv(r"<directory>" + "\\" + bdm_study_code + "\\" + file_name, low_memory=False) 
     
     return df
